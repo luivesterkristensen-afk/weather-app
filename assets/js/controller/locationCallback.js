@@ -3,7 +3,7 @@ import { getWeatherData } from "../model/weatherdata.js"
 import { headerComponent } from "../view/headerComponent.js"
 import { mainCardComponent } from "../view/mainCardComponent.js"
 
-export async function initWeather() {
+export async function initWeather(app) {
   try {
     const pos = await getPosition()
     const rawData = await getWeatherData(pos.lat, pos.long)
@@ -13,6 +13,26 @@ export async function initWeather() {
     // Send første dags objekt til dit view.
     headerComponent(days[0], app)
     mainCardComponent(days[0], app)
+    // send data videre til views her, fx daycard.js
+  } catch (error) {
+    console.error("No data today:", error)
+    // kald en view-funktion der viser "Could not fetch"
+  }
+}
+
+export async function initWeatherPageTwo(app) {
+  try {
+    const pos = await getPosition()
+    const rawData = await getWeatherData(pos.lat, pos.long)
+    
+    const days = dataConversion(rawData)
+
+    // Send første dags objekt til dit view.
+    mainCardComponent(days[0], app)
+    mainCardComponent(days[1], app)
+    mainCardComponent(days[2], app)
+    mainCardComponent(days[3], app)
+    mainCardComponent(days[4], app)
     // send data videre til views her, fx daycard.js
   } catch (error) {
     console.error("No data today:", error)

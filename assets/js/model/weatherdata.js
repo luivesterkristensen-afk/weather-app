@@ -4,6 +4,7 @@ function buildURL(lat, long) {
   const params = new URLSearchParams({
     latitude: lat,
     longitude: long,
+    forecast_days: 5,
     daily: "weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant",
     hourly: "temperature_2m,precipitation,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m,temperature_80m",
     timezone: "Europe/Berlin",
