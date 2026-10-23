@@ -1,5 +1,5 @@
 ﻿// København bruges som reserveposition (lat = breddegrad, long = længdegrad).
-const fallback = { lat: 55.6761, long: 12.5683 }
+const fallback = { lat: 57.0467, long: 9.9359 }
 
 export function getPosition() {
   // En Promise lader os vente på positionen med await getPosition().

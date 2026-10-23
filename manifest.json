@@ -1,0 +1,9 @@
+{
+	"name": "Weather App",
+	"short_name": "Weather",
+	"description": "Check the weather in your location.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#2196f3"
+}
