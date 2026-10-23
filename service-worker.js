@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "weather-app-simple-v1"
+﻿const CACHE_NAME = "weather-app-simple-v2"
 
 // Gem disse filer, så appen også kan åbnes uden internet.
 const FILES = [
@@ -75,3 +75,4 @@ self.addEventListener("fetch", (event) => {
 
     event.respondWith(getResponse(event.request))
 })
+

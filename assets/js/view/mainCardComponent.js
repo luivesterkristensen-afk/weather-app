@@ -7,3 +7,4 @@ export function mainCardComponent(day, app){
     </div>`
     app.innerHTML += mainCard
 }
+
